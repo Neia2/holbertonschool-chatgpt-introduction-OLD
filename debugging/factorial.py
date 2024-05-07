@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 import sys
 
+if len(sys.argv) < 2:
+    print("Usage: ./factorial.py <number>")
+    sys.exit(1)
 
 def factorial(n):
     result = 1
@@ -8,7 +11,6 @@ def factorial(n):
         result *= n
         n -= 1
     return result
-
 
 f = factorial(int(sys.argv[1]))
 print(f)
